@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+h1 a,
+h2 {
+  font-family: "Big Shoulders Stencil Display", cursive;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 65px;
+  background-color: #1a535c;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+}
+
+h1 a {
+  font-size: 2.5rem;
+}
+
+.navelemente {
+  height: 100%;
+  display: flex;
+}
+
+.navelemente a {
+  font-size: 1.6rem;
+  padding: 1rem 1rem;
+  transition: 0.2s;
+}
+
+nav a:hover:not(.contact-background) {
+  color: whitesmoke;
+  background-color: #4ecdc4;
+}
+
+.contact-background {
+  background-color: #4ecdc4;
+  color: whitesmoke;
+}
+
+.contact-background:hover {
+  background-color: #1a535c;
+  color: whitesmoke;
+}
+
+header {
+  margin-top: 65px;
+}
+
+section {
+  margin-top: 450px;
+}
