@@ -3,11 +3,20 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Open Sans Condensed", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(../Media/Mountains.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 a {
@@ -26,32 +35,53 @@ nav {
   top: 0px;
   height: 65px;
   background-color: #1a535c;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-h1 {
+nav h1 {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-h1 a {
+nav h1 a {
   font-size: 2.5rem;
   height: 100%;
   padding: 0.4rem 1rem;
 }
 
-.navelemente {
+nav .navelemente {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
-.navelemente a {
+nav .navelemente a {
   font-size: 1.6rem;
   padding: 1rem 1rem;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+nav .navelemente .contact-background {
+  background-color: #4ecdc4;
+  color: whitesmoke;
+}
+
+nav .navelemente .contact-background:hover {
+  background-color: #1a535c;
+  color: whitesmoke;
 }
 
 nav a:hover:not(.contact-background) {
@@ -59,31 +89,32 @@ nav a:hover:not(.contact-background) {
   background-color: #4ecdc4;
 }
 
-.contact-background {
-  background-color: #4ecdc4;
-  color: whitesmoke;
+main {
+  min-width: 400px;
+  width: 85%;
+  background: #d7fdff;
+  margin: 8rem auto;
 }
 
-.contact-background:hover {
-  background-color: #1a535c;
-  color: whitesmoke;
-}
-
-header {
-  margin-top: 65px;
-}
-
-section {
+main section {
   margin-top: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#grid {
+main #grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
 }
 
-#grid div {
+main #grid div {
   text-align: center;
   font-size: 10em;
   border-radius: 4px;
@@ -95,3 +126,4 @@ section {
     font-size: 16px;
   }
 }
+/*# sourceMappingURL=style.css.map */

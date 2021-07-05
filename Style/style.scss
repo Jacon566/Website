@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url(../Media/Mountains.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+h1 a,
+h2 {
+  font-family: "Big Shoulders Stencil Display", cursive;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  height: 65px;
+  background-color: #1a535c;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+  align-items: center;
+
+  h1 {
+    height: 100%;
+    display: flex;
+
+    a {
+      font-size: 2.5rem;
+      height: 100%;
+      padding: 0.4rem 1rem;
+    }
+  }
+
+  .navelemente {
+    height: 100%;
+    display: flex;
+
+    a {
+      font-size: 1.6rem;
+      padding: 1rem 1rem;
+      transition: 0.2s;
+    }
+
+    .contact-background {
+      background-color: #4ecdc4;
+      color: whitesmoke;
+
+      &:hover {
+        background-color: #1a535c;
+        color: whitesmoke;
+      }
+    }
+  }
+
+  a:hover:not(.contact-background) {
+    color: whitesmoke;
+    background-color: #4ecdc4;
+  }
+}
+
+main {
+  min-width: 400px;
+  width: 85%;
+  background: #d7fdff;
+  margin: 8rem auto;
+
+  section {
+    margin-top: 450px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+
+    div {
+      text-align: center;
+      font-size: 10em;
+      border-radius: 4px;
+      border: 1px solid black;
+    }
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .navelemente a {
+    font-size: 16px;
+  }
+}
