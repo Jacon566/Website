@@ -139,20 +139,23 @@ main {
 
     .navelemente {
       position: absolute;
-      top: 65px;
+      top: 0;
       left: 0;
       width: 100vw;
       background-color: #1a535c;
-      display: none;
+      display: flex;
+      opacity: 0;
       justify-content: center;
-      //display: none !important;
+      transition: 0.3s;
       a {
         padding-top: 1.4rem;
         font-size: 1rem;
       }
 
       &.active {
+        opacity: 1;
         display: flex;
+        top: 65px;
       }
     }
   }

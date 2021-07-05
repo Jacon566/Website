@@ -161,23 +161,30 @@ main #grid div {
   }
   nav .navelemente {
     position: absolute;
-    top: 65px;
+    top: 0;
     left: 0;
     width: 100vw;
     background-color: #1a535c;
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
   nav .navelemente a {
     padding-top: 1.4rem;
     font-size: 1rem;
   }
   nav .navelemente.active {
+    opacity: 1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 65px;
   }
 }
 /*# sourceMappingURL=style.css.map */
