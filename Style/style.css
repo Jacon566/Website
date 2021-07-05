@@ -84,6 +84,37 @@ nav .navelemente .contact-background:hover {
   color: whitesmoke;
 }
 
+nav #hamburger {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+}
+
+nav #hamburger span {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  background-color: whitesmoke;
+  top: 8px;
+  border-radius: 4px;
+}
+
+nav #hamburger span:nth-child(2) {
+  top: 18px;
+}
+
+nav #hamburger span:nth-child(3) {
+  top: 28px;
+}
+
+nav #hamburger.active {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
 nav a:hover:not(.contact-background) {
   color: whitesmoke;
   background-color: #4ecdc4;
@@ -121,9 +152,32 @@ main #grid div {
   border: 1px solid black;
 }
 
-@media only screen and (max-width: 680px) {
-  .navelemente a {
-    font-size: 16px;
+@media only screen and (max-width: 700px) {
+  nav #hamburger {
+    display: block !important;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  nav .navelemente {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100vw;
+    background-color: #1a535c;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav .navelemente a {
+    padding-top: 1.4rem;
+    font-size: 1rem;
+  }
+  nav .navelemente.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=style.css.map */

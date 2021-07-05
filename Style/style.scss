@@ -70,6 +70,34 @@ nav {
     }
   }
 
+  #hamburger {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s;
+    display: none;
+
+    span {
+      position: absolute;
+      width: 35px;
+      height: 4px;
+      background-color: whitesmoke;
+      top: 8px;
+      border-radius: 4px;
+
+      &:nth-child(2) {
+        top: 18px;
+      }
+      &:nth-child(3) {
+        top: 28px;
+      }
+    }
+
+    &.active {
+      transform: rotate(90deg);
+    }
+  }
+
   a:hover:not(.contact-background) {
     color: whitesmoke;
     background-color: #4ecdc4;
@@ -102,8 +130,30 @@ main {
   }
 }
 
-@media only screen and (max-width: 680px) {
-  .navelemente a {
-    font-size: 16px;
+@media only screen and (max-width: 700px) {
+  nav {
+    #hamburger {
+      display: block !important;
+      order: 3;
+    }
+
+    .navelemente {
+      position: absolute;
+      top: 65px;
+      left: 0;
+      width: 100vw;
+      background-color: #1a535c;
+      display: none;
+      justify-content: center;
+      //display: none !important;
+      a {
+        padding-top: 1.4rem;
+        font-size: 1rem;
+      }
+
+      &.active {
+        display: flex;
+      }
+    }
   }
 }
